@@ -13,7 +13,7 @@ while (stop) {
       break;
     case "delete":
       baza.splice(
-        baza.findIndex((arr) => arr[0] == text[1]),
+        baza.findIndex((arr) => arr == text[1]),
         1
       );
       console.log(text[1] + " o'chirildi");
@@ -32,4 +32,5 @@ while (stop) {
   }
 }
 
-console.log(baza);
+baza.forEach((elem)=>console.log(elem))
+
