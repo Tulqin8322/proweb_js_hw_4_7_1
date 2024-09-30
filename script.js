@@ -3,7 +3,7 @@ const baza = [];
 
 while (stop) {
   const text = prompt(
-    "Komanda va matn kiriting. (add, Ali) yoki (delete, Ali) yoki (update, Ali, Abbos) yoki (stop) ko'rinishida"
+    "Komanda va matn kiriting. (add, Ali) yoki (del, Ali) yoki (update, Ali, Abbos) yoki (stop) ko'rinishida"
   ).split(",");
 
   switch (text[0]) {
@@ -11,7 +11,7 @@ while (stop) {
       baza.push(text[1]);
       console.log(text[1] + " qo'shildi");
       break;
-    case "delete":
+    case "del":
       baza.splice(
         baza.findIndex((arr) => arr == text[1]),
         1
@@ -32,5 +32,5 @@ while (stop) {
   }
 }
 
-baza.forEach((elem)=>console.log(elem))
+console.log(baza)
 
